@@ -44,17 +44,62 @@ class AmazonParser {
 
         return nil
     }
+    
     func parseRating(from data: Data) -> Double? {
-            // Try to parse JSON data
-            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                // Look for the rating in the JSON data structure
-                if let ratingValue = json["rating"] as? Double {
-                    return ratingValue
-                }
+        struct ParsedResponse: Decodable {
+            let averageRating: Double?
+
+            private enum CodingKeys: String, CodingKey {
+                case averageRating = "average_rating"
             }
-            
-            // If not found, return nil
+        }
+
+        do {
+            let decoded = try JSONDecoder().decode(ParsedResponse.self, from: data)
+            return decoded.averageRating
+        } catch {
+            print("JSON parse error (rating): \(error)")
             return nil
         }
     }
 
+    
+    func parseFourStarPercentage(from data: Data) -> Double? {
+        struct ParsedResponse: Decodable {
+            let fourStar: Double?
+
+            private enum CodingKeys: String, CodingKey {
+                case fourStar = "4_star_percentage"
+            }
+        }
+
+        do {
+            let decoded = try JSONDecoder().decode(ParsedResponse.self, from: data)
+            return decoded.fourStar
+        } catch {
+            print("JSON parse error (4-star): \(error)")
+            return nil
+        }
+    }
+
+
+    func parseFiveStarPercentage(from data: Data) -> Double? {
+        struct ParsedResponse: Decodable {
+            let fiveStar: Double?
+
+            private enum CodingKeys: String, CodingKey {
+                case fiveStar = "5_star_percentage"
+            }
+        }
+
+        do {
+            let decoded = try JSONDecoder().decode(ParsedResponse.self, from: data)
+            return decoded.fiveStar
+        } catch {
+            print("JSON parse error (5-star): \(error)")
+            return nil
+        }
+    }
+
+
+}
