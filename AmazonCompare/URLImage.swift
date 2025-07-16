@@ -3,29 +3,38 @@ import SwiftUI
 
 struct URLImage: View {
     let url: URL?
-    @State private var loadedImage: Image?
+    let placeholder: Image
+    var contentMode: ContentMode = .fit
+    var height: CGFloat = 100
+
+    @State private var loadedImage: NSImage? = nil
 
     var body: some View {
-        ZStack {
-            if let image = loadedImage {
-                image
+        Group {
+            if let loadedImage = loadedImage {
+                Image(nsImage: loadedImage)
                     .resizable()
+                    .aspectRatio(contentMode: contentMode)
+                    .frame(height: height)
             } else {
-                Rectangle()
-                    .fill(Color.gray.opacity(0.3))
-                    .overlay(Text("...").font(.caption))
+                placeholder
+                    .resizable()
+                    .aspectRatio(contentMode: contentMode)
+                    .frame(height: height)
             }
         }
-        .onAppear(perform: loadImage)
+        .onAppear {
+            loadImage()
+        }
     }
 
     private func loadImage() {
-        guard let url = url, loadedImage == nil else { return }
+        guard loadedImage == nil, let url = url else { return }
 
         URLSession.shared.dataTask(with: url) { data, _, _ in
             if let data = data, let nsImage = NSImage(data: data) {
                 DispatchQueue.main.async {
-                    self.loadedImage = Image(nsImage: nsImage)
+                    self.loadedImage = nsImage
                 }
             }
         }.resume()

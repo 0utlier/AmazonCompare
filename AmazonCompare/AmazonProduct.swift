@@ -16,6 +16,7 @@ struct AmazonProduct {
         rating: 0.0,
         fourStarPercentage: 0.0,
         fiveStarPercentage: 0.0,
-        imageUrls: ["https://m.media-amazon.com/images/I/31-aH0bzOSS.jpg"]
+//        imageUrls: ["https://m.media-amazon.com/images/I/31-aH0bzOSS.jpg"]
+        imageUrls: []
     )
 }

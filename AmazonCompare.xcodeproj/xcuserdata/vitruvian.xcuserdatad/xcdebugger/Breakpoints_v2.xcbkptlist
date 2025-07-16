@@ -7,40 +7,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EFEBB670-F7F0-4E1F-ABB7-E5C97EF5C47B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AmazonCompare/URLImage.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "5"
-            endingLineNumber = "5"
-            landmarkName = "URLImage"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D2284A49-1D82-4FAB-B564-FFA9C8B8456B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AmazonCompare/URLImage.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6"
-            endingLineNumber = "6"
-            landmarkName = "URLImage"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "6174EFF1-33F7-4718-B0D1-6C911D5679FA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AmazonCompare/ImageGalleryView.swift"
@@ -80,7 +48,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
                   endingLineNumber = "12"
-                  offsetFromSymbolStart = "420">
+                  offsetFromSymbolStart = "478">
                </Location>
                <Location
                   uuid = "452FDD20-4D21-4688-B129-ADB5E0A39CC4 - 43069902cfa43b48"
@@ -98,6 +66,86 @@
                   offsetFromSymbolStart = "1248">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C29CDDE9-3A97-4E50-9547-B5569AA3CEBC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmazonCompare/ImageGalleryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E60BD76B-DFBF-4A40-9B90-D1B3A450FDE9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmazonCompare/ImagePreviewWindow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "E60BD76B-DFBF-4A40-9B90-D1B3A450FDE9 - 31fffc78e5a69ef2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmazonCompare.ImagePreviewWindow.body.getter : some"
+                  moduleName = "AmazonCompare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitruvian/Developer/AmazonCompare/AmazonCompare/ImagePreviewWindow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "385">
+               </Location>
+               <Location
+                  uuid = "E60BD76B-DFBF-4A40-9B90-D1B3A450FDE9 - c0a5ddc77086f98a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.GeometryReader&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Button&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.contentShape&lt;A where A1: SwiftUI.Shape&gt;(_: A1, eoFill: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.contentShape&lt;A where A1: SwiftUI.Shape&gt;(_: A1, eoFill: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;)&gt; in AmazonCompare.ImagePreviewWindow.body.getter : some"
+                  moduleName = "AmazonCompare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitruvian/Developer/AmazonCompare/AmazonCompare/ImagePreviewWindow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "295">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C01C26C1-FCA2-47ED-943F-A0E57A88A8C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmazonCompare/ComparisonColumnView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

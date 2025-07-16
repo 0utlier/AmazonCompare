@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct ImageGalleryView: View {
-    @State var images: [String]  // The image names
+    @Binding var images: [String]  // The image names
     @State private var selectedImage: ImageItem?  // Use an Identifiable type
     
     var body: some View {
@@ -11,7 +11,8 @@ struct ImageGalleryView: View {
                 ForEach(images.indices, id: \.self) { index in
                     ZStack(alignment: .topTrailing) {
                         if let url = URL(string: images[index]) {
-                            URLImage(url: url)
+                            URLImage(url: url, placeholder: Image("placeholder_photo")
+)
                                 .frame(width: 160, height: 160)
                                 .cornerRadius(4)
                                 .scaledToFit()

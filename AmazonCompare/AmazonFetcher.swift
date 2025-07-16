@@ -20,7 +20,6 @@ class AmazonFetcher {
         }
 
         URLSession.shared.dataTask(with: finalURL) { data, _, error in
-            
             if let error = error {
                 completion(.failure(error))
             } else if let data = data {

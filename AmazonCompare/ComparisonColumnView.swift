@@ -13,21 +13,19 @@ struct ComparisonColumnView: View {
             Button("Load Product Info") {
                 guard let url = URL(string: urlString) else { return }
                 
-//                AmazonParser.shared.loadAmazonProduct(from: urlString)  { result in
-//                    if let product = result {
-//                        self.product = product
-//                    } else {
-//                        print("Failed to load product")
-//                    }
-//                }
+                //                AmazonParser.shared.loadAmazonProduct(from: urlString)  { result in
+                //                    if let product = result {
+                //                        self.product = product
+                //                    } else {
+                //                        print("Failed to load product")
+                //                    }
+                //                }
                 
-                    
-                    
                 AmazonFetcher.shared.fetchProductData(for: url) { result in
                     switch result {
                     case .success(let data):
                         let parser = AmazonParser()
-
+                        
                         // Parse the title
                         if let parsedTitle = parser.parseTitle(from: data) {
                             DispatchQueue.main.async {
@@ -36,7 +34,7 @@ struct ComparisonColumnView: View {
                         } else {
                             print("Could not parse title.")
                         }
-
+                        
                         // Parse the price
                         if let parsedPrice = parser.parsePrice(from: data) {
                             DispatchQueue.main.async {
@@ -45,7 +43,7 @@ struct ComparisonColumnView: View {
                         } else {
                             print("Could not parse price.")
                         }
-
+                        
                         // Parse the rating (added here)
                         if let parsedRating = parser.parseRating(from: data) {
                             DispatchQueue.main.async {
@@ -62,7 +60,7 @@ struct ComparisonColumnView: View {
                         } else {
                             print("Could not parse 4 star rating.")
                         }
-
+                        
                         // Parse 5-star percentage
                         if let fiveStar = parser.parseFiveStarPercentage(from: data) {
                             DispatchQueue.main.async {
@@ -71,16 +69,16 @@ struct ComparisonColumnView: View {
                         } else {
                             print("Could not parse 5 star rating.")
                         }
-
+                        
                         // Parse Images
                         if let imageURLs = parser.parseImageURLs(from: data) {
                             DispatchQueue.main.async {
                                 product.imageUrls = imageURLs
-                                //                                print("IMAGES: \(imageURLs)")
+//                                print("IMAGES: \(imageURLs)")
                             }
                         } else {
                             print("Could not parse images.")
-
+                            
                         }
                     case .failure(let error):
                         print("Fetch error: \(error.localizedDescription)")
@@ -103,12 +101,12 @@ struct ComparisonColumnView: View {
                 .font(.subheadline)
                 .foregroundColor(.yellow)
             
+            // not necessary 07.15.25 - displays URLs from images. But now they display correctly 1700
+//            Text("Image URLs: \(String(describing: product.imageUrls))")
+//                .font(.subheadline)
             
-            Text("Image URLs: \(String(describing: product.imageUrls))")
-                .font(.subheadline)
-
-            ImageGalleryView(images: product.imageUrls)
-
+            ImageGalleryView(images: $product.imageUrls)
+            
             
             Spacer()
         }
